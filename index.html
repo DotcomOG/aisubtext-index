@@ -1,512 +1,408 @@
-<!-- AIsubtext AI Brand Index 2026 - v10.0 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Brand Index 2026 — How AI Describes Your Company | AIsubtext</title>
-<meta name="description" content="We scanned 5,600+ companies across 10 industries to measure AI brand visibility. See how your industry stacks up.">
+<meta name="description" content="We tested 5,600+ companies across 10 industries. AI is describing most of them wrong. See how your industry scores.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://index.aisubtext.ai">
+<meta property="og:title" content="AI Brand Index 2026 — AIsubtext">
+<meta property="og:description" content="AI is describing your brand wrong. We tested 5,600+ companies to prove it.">
+<meta property="og:url" content="https://index.aisubtext.ai">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { background: #080808; color: #f5f2eb; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; }
+:root {
+  --white:   #f5f2ed;
+  --cream:   #f0ebe3;
+  --ink:     #1a1714;
+  --accent:  #c8410a;
+  --accent-l:#e8520f;
+  --muted:   #7a7268;
+  --border:  #d4cdc4;
+  --dark:    #1a1714;
+  --dark-mid:#2a2520;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--white); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
 
-.cur { position: fixed; width: 10px; height: 10px; background: #ff4d1c; border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); }
-.cur-ring { position: fixed; width: 36px; height: 36px; border: 2px solid rgba(255,77,28,0.7); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: width 0.15s, height 0.15s; }
-
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 3rem; background: rgba(8,8,8,0.97); border-bottom: 1px solid rgba(255,255,255,0.08); height: 60px; }
-.logo { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.4rem; letter-spacing: 0.08em; color: #f5f2eb; text-decoration: none; }
-.logo span { color: #ff4d1c; }
+/* NAV */
+.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 48px; display: flex; align-items: center; justify-content: space-between; background: rgba(245,242,237,0.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.logo { font-family: 'DM Mono', monospace; font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+.logo span { color: var(--accent); }
 .nav-links { display: flex; align-items: center; gap: 2.5rem; }
-.nav-links a { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888; text-decoration: none; }
-.nav-links a:hover { color: #f5f2eb; }
-.nav-cta { background: #ff4d1c !important; color: #080808 !important; padding: 0.45rem 1.25rem !important; font-weight: 500 !important; }
+.nav-links a { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+.nav-links a:hover { color: var(--ink); }
+.nav-cta { background: var(--accent) !important; color: var(--white) !important; padding: 8px 18px !important; letter-spacing: 0.08em !important; }
+.nav-cta:hover { background: var(--accent-l) !important; }
 
-.hero { padding: 80px 3rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-.eyebrow { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: #ff4d1c; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
-.eyebrow::before { content: ''; display: block; width: 2rem; height: 1px; background: #ff4d1c; }
-h1 { font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(4rem, 7vw, 8rem); line-height: 0.92; margin-bottom: 1.5rem; color: #f5f2eb; }
-h1 em { font-style: normal; color: #ff4d1c; display: block; }
-.hero-sub { font-size: 1rem; line-height: 1.75; color: rgba(245,242,235,0.6); max-width: 480px; margin-bottom: 2.5rem; }
-.hero-sub strong { color: #ff4d1c; }
-.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn-p { background: #ff4d1c; color: #080808; padding: 0.875rem 2rem; font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; font-weight: 500; display: inline-block; }
-.btn-p:hover { background: #f5f2eb; }
-.btn-g { color: #f5f2eb; padding: 0.875rem 2rem; font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(245,242,235,0.2); display: inline-block; }
-.btn-g:hover { border-color: #f5f2eb; }
+/* HERO */
+.hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 61px; }
+.hero-left { padding: 80px 48px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--border); }
+.hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 32px; }
+.hero-title { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; color: var(--ink); margin-bottom: 28px; }
+.hero-title em { font-style: italic; color: var(--accent); }
+.hero-body { font-size: 17px; line-height: 1.8; color: var(--muted); max-width: 460px; margin-bottom: 16px; font-weight: 300; }
+.hero-note { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.06em; margin-bottom: 40px; opacity: 0.7; }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-p { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: var(--white); text-decoration: none; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 24px; transition: background 0.2s; }
+.btn-p:hover { background: var(--accent-l); }
+.btn-g { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--border); color: var(--ink); text-decoration: none; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 24px; transition: border-color 0.2s; }
+.btn-g:hover { border-color: var(--ink); }
 
-.stat-grid { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(255,255,255,0.2); }
-.stat { padding: 2rem; }
-.stat:nth-child(1) { background: #080808; border-right: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.2); }
-.stat:nth-child(2) { background: #ff4d1c; border-bottom: 1px solid rgba(255,255,255,0.2); }
-.stat:nth-child(3) { background: #ff4d1c; border-right: 1px solid rgba(255,255,255,0.2); }
-.stat:nth-child(4) { background: #080808; }
-.stat-val { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 3.5rem; line-height: 1; margin-bottom: 0.5rem; color: #f5f2eb; }
-.stat-lbl { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,242,235,0.6); }
+/* STAT GRID — single 2×2 */
+.hero-right { background: var(--dark); padding: 80px 48px; display: flex; flex-direction: column; justify-content: center; gap: 48px; }
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid #2e2924; }
+.stat { padding: 40px 36px; }
+.stat:nth-child(1) { background: var(--dark); border-right: 1px solid #2e2924; border-bottom: 1px solid #2e2924; }
+.stat:nth-child(2) { background: var(--accent); border-bottom: 1px solid #2e2924; }
+.stat:nth-child(3) { background: var(--accent); border-right: 1px solid #2e2924; }
+.stat:nth-child(4) { background: var(--dark); }
+.stat-val { font-family: 'DM Serif Display', serif; font-size: clamp(3rem, 4vw, 4.5rem); line-height: 1; margin-bottom: 10px; color: var(--white); }
+.stat-lbl { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,242,237,0.5); }
+.hero-right-note { font-family: 'DM Mono', monospace; font-size: 11px; color: #3a3530; letter-spacing: 0.06em; line-height: 1.7; }
 
-.ticker-wrap { overflow: hidden; white-space: nowrap; padding: 0.8rem 0; background: #111; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); }
-.ticker { display: inline-block; animation: tick 50s linear infinite; }
-.ticker span { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,235,0.4); padding: 0 2.5rem; }
-.ticker span::after { content: attr(data-score); color: #ff4d1c; margin-left: 0.5rem; }
-@keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+/* SECTIONS */
+section { padding: 96px 48px; border-bottom: 1px solid var(--border); }
+.section-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+.section-title { font-family: 'DM Serif Display', serif; font-size: clamp(30px, 3.5vw, 46px); line-height: 1.1; margin-bottom: 20px; }
+.section-body { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 56px; font-weight: 300; line-height: 1.8; }
 
-.section { padding: 5rem 3rem; }
-.section.alt { background: #111; }
-.sec-hdr { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 3rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
-.sec-title { font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(2.5rem, 4vw, 4rem); color: #f5f2eb; }
-.sec-meta { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888; }
+/* INDUSTRY CARDS */
+.ind-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.ind-card { background: var(--white); padding: 40px 32px; cursor: pointer; transition: background 0.15s; }
+.ind-card:hover { background: var(--cream); }
+.ind-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
+.ind-name { font-family: 'DM Serif Display', serif; font-size: 22px; line-height: 1.1; color: var(--ink); }
+.ind-count { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+.ind-grade { font-family: 'DM Serif Display', serif; font-size: 52px; line-height: 1; }
+.ind-bar-track { width: 100%; height: 2px; background: var(--border); margin-bottom: 8px; }
+.ind-bar-fill { height: 100%; }
+.ind-bar-labels { display: flex; justify-content: space-between; margin-bottom: 0; }
+.ind-bar-label { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 0.08em; }
+.ind-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px; }
+.ind-stat { text-align: center; }
+.ind-stat + .ind-stat { border-left: 1px solid var(--border); }
+.ind-stat-val { font-family: 'DM Serif Display', serif; font-size: 26px; line-height: 1; margin-bottom: 4px; }
+.ind-stat-lbl { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 
-/* ── INDUSTRY CARDS */
-.ind-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); }
-.ind-card { background: #0d0d0d; padding: 2rem 2rem 1.75rem; transition: background 0.15s; cursor: default; }
-.ind-card:hover { background: #141414; }
-.ind-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; }
-.ind-name { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.8rem; line-height: 1; color: #f5f2eb; }
-.ind-count { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888; margin-top: 0.3rem; }
-.ind-grade { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 3.5rem; line-height: 1; }
-.ind-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.25rem; margin-top: 0.25rem; }
-.ind-stat { text-align: center; padding: 0 0.5rem; }
-.ind-stat + .ind-stat { border-left: 1px solid rgba(255,255,255,0.06); }
-.ind-stat-val { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.6rem; line-height: 1; margin-bottom: 0.3rem; }
-.ind-stat-lbl { font-family: 'DM Mono', monospace; font-size: 0.52rem; letter-spacing: 0.12em; text-transform: uppercase; color: #888; }
-.ind-bar-wrap { margin: 1.25rem 0 0; }
-.ind-bar-track { width: 100%; height: 2px; background: rgba(255,255,255,0.07); border-radius: 2px; overflow: hidden; }
-.ind-bar-fill { height: 100%; border-radius: 2px; transition: width 0.6s ease; }
-.ind-bar-labels { display: flex; justify-content: space-between; margin-top: 0.5rem; }
-.ind-bar-label { font-family: 'DM Mono', monospace; font-size: 0.52rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; }
+/* DISTRIBUTION — dark panel */
+.dist-panel { background: var(--dark); padding: 80px 48px; border-bottom: 1px solid var(--border); }
+.dist-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: start; }
+.dist-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+.dist-big { font-family: 'DM Serif Display', serif; font-size: clamp(4.5rem, 6vw, 7rem); line-height: 0.9; color: var(--white); margin-bottom: 16px; }
+.dist-big em { font-style: normal; color: var(--accent); }
+.dist-copy { font-size: 15px; line-height: 1.8; color: #7a7268; font-weight: 300; }
+.dist-bars { display: flex; flex-direction: column; gap: 18px; padding-top: 8px; }
+.dist-row { display: grid; grid-template-columns: 80px 1fr 48px; gap: 16px; align-items: center; }
+.dist-range { font-family: 'DM Mono', monospace; font-size: 11px; color: #5a5248; letter-spacing: 0.06em; }
+.dist-track { height: 3px; background: #2a2520; }
+.dist-fill { height: 100%; }
+.dist-pct { font-family: 'DM Serif Display', serif; font-size: 18px; text-align: right; }
 
-/* ── OVERALL SUMMARY BAR */
-.summary-band { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(255,255,255,0.2); margin: 0 3rem; }
-.sb-item { padding: 2rem; }
-.sb-item:nth-child(1) { background: #080808; border-right: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.2); }
-.sb-item:nth-child(2) { background: #ff4d1c; border-bottom: 1px solid rgba(255,255,255,0.2); }
-.sb-item:nth-child(3) { background: #ff4d1c; border-right: 1px solid rgba(255,255,255,0.2); }
-.sb-item:nth-child(4) { background: #080808; }
-.sb-val { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 3rem; line-height: 1; color: #f5f2eb; margin-bottom: 0.4rem; }
-.sb-lbl { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,242,235,0.6); }
+/* AUDIT STRIP */
+.audit-strip { background: var(--accent); padding: 64px 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; border-bottom: 1px solid var(--border); }
+.audit-strip h3 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3vw, 40px); color: var(--white); margin-bottom: 10px; line-height: 1.1; }
+.audit-strip p { font-size: 15px; color: rgba(245,242,237,0.7); line-height: 1.7; max-width: 480px; font-weight: 300; }
+.btn-inv { display: inline-flex; align-items: center; gap: 10px; background: var(--white); color: var(--ink); text-decoration: none; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 28px; white-space: nowrap; transition: background 0.2s; }
+.btn-inv:hover { background: var(--cream); }
 
-/* ── DISTRIBUTION */
-.dist-section { padding: 5rem 3rem; }
-.dist-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; }
-.dist-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888; margin-bottom: 0.75rem; }
-.dist-big { font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(4rem, 6vw, 7rem); line-height: 0.9; color: #f5f2eb; margin-bottom: 1rem; }
-.dist-big span { color: #ff4d1c; }
-.dist-copy { font-size: 0.85rem; line-height: 1.8; color: rgba(245,242,235,0.5); }
-.dist-bars { display: flex; flex-direction: column; gap: 0.75rem; }
-.dist-row { display: grid; grid-template-columns: 120px 1fr 60px; gap: 1rem; align-items: center; }
-.dist-range { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; }
-.dist-track { height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
-.dist-fill { height: 100%; border-radius: 3px; }
-.dist-pct { font-family: 'DM Mono', monospace; font-size: 0.68rem; text-align: right; }
+/* METHODOLOGY */
+.method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.method-card { background: var(--white); padding: 40px 32px; }
+.method-num { font-family: 'DM Serif Display', serif; font-size: 48px; color: var(--accent); line-height: 1; margin-bottom: 16px; }
+.method-title { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); margin-bottom: 12px; }
+.method-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
-/* ── AUDIT CTA STRIP */
-.audit-strip { background: #111; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-.audit-strip-text h3 { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 2rem; margin-bottom: 0.5rem; }
-.audit-strip-text p { font-size: 0.85rem; color: rgba(245,242,235,0.5); line-height: 1.6; max-width: 500px; }
+/* CTA */
+.cta-sec { padding: 96px 48px; text-align: center; }
+.cta-sec h2 { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 5vw, 64px); line-height: 1.05; margin-bottom: 20px; color: var(--ink); }
+.cta-sec h2 em { font-style: italic; color: var(--accent); }
+.cta-sec p { font-size: 17px; color: var(--muted); max-width: 440px; margin: 0 auto 40px; line-height: 1.8; font-weight: 300; }
+.cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
-/* ── METHODOLOGY */
-.method-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); margin-top: 3rem; }
-.method-card { background: #080808; padding: 2.5rem; }
-.method-num { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 3rem; color: #ff4d1c; margin-bottom: 1rem; }
-.method-title { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.75rem; color: #f5f2eb; }
-.method-desc { font-size: 0.78rem; line-height: 1.75; color: rgba(245,242,235,0.45); }
+/* FOOTER */
+footer { background: var(--dark); color: #5a5248; padding: 64px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; border-top: 1px solid var(--dark-mid); }
+.footer-brand { font-family: 'DM Mono', monospace; font-size: 14px; color: var(--cream); margin-bottom: 16px; }
+.footer-brand span { color: var(--accent); }
+.footer-note { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.04em; line-height: 1.9; }
+.footer-legal { font-size: 11px; line-height: 1.9; font-family: 'DM Mono', monospace; letter-spacing: 0.02em; margin-bottom: 16px; }
+.footer-legal a { color: var(--accent); text-decoration: none; }
+.footer-copy { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #3a3530; }
 
-.cta-sec { padding: 7rem 3rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.08); }
-.cta-sec h2 { font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(3.5rem,6vw,7rem); line-height: 0.93; margin-bottom: 1.5rem; color: #f5f2eb; }
-.cta-sec p { font-size: 1rem; color: rgba(245,242,235,0.55); max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.75; }
-.cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-footer { border-top: 1px solid rgba(255,255,255,0.08); font-family: 'DM Mono', monospace; color: #888; }
-.footer-top { display: flex; justify-content: space-between; align-items: flex-start; padding: 2.5rem 3rem 2rem; gap: 3rem; }
-.footer-brand { flex-shrink: 0; }
-.footer-brand-name { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.4rem; letter-spacing: 0.08em; color: #f5f2eb; margin-bottom: 0.5rem; }
-.footer-brand-name span { color: #ff4d1c; }
-.footer-brand-desc { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; line-height: 1.6; max-width: 220px; }
-.footer-links { display: flex; gap: 4rem; }
-.footer-col-title { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: #f5f2eb; margin-bottom: 1rem; }
-.footer-col a { display: block; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; text-decoration: none; margin-bottom: 0.6rem; }
-.footer-col a:hover { color: #f5f2eb; }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding: 1.5rem 3rem; }
-.footer-legal { font-size: 0.6rem; line-height: 1.8; color: rgba(136,136,136,0.7); letter-spacing: 0.03em; text-transform: none; }
-.footer-legal a { color: rgba(136,136,136,0.7); text-decoration: underline; }
-.footer-legal a:hover { color: #f5f2eb; }
-.footer-copy { font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-top: 1rem; }
-
-/* ── MODAL */
-.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 1000; align-items: center; justify-content: center; }
+/* MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(10,8,6,0.8); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
 .modal-overlay.open { display: flex; }
-.modal { background: #080808; border: 1px solid rgba(255,255,255,0.12); max-width: 480px; width: 90%; padding: 3rem; position: relative; }
-.modal-x { position: absolute; top: 1.25rem; right: 1.25rem; background: none; border: none; color: #888; font-size: 1.25rem; cursor: pointer; }
-.modal-x:hover { color: #f5f2eb; }
-.m-eye { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #ff4d1c; margin-bottom: 1rem; }
-.m-ind { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 2.5rem; line-height: 1; margin-bottom: 0.5rem; color: #f5f2eb; }
-.m-sub { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: #888; margin-bottom: 1.75rem; }
-.modal p { font-size: 0.85rem; line-height: 1.75; color: rgba(245,242,235,0.6); margin-bottom: 1.75rem; }
-.m-input { width: 100%; background: #111; border: 1px solid rgba(255,255,255,0.1); color: #f5f2eb; padding: 0.875rem 1rem; font-family: 'DM Mono', monospace; font-size: 0.78rem; outline: none; margin-bottom: 0.75rem; }
-.m-input:focus { border-color: #ff4d1c; }
-.m-input::placeholder { color: #888; }
-.m-submit { width: 100%; background: #ff4d1c; color: #080808; border: none; padding: 0.875rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; cursor: pointer; }
-.m-submit:hover { background: #f5f2eb; }
-.m-success { display: none; text-align: center; padding: 1rem 0; }
-.m-success .check { font-size: 2.5rem; margin-bottom: 1rem; }
-.m-success h3 { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 2rem; margin-bottom: 0.75rem; color: #00c896; }
-.m-success p { font-size: 0.85rem; color: rgba(245,242,235,0.6); line-height: 1.75; margin-bottom: 0; }
+.modal { background: var(--white); border: 1px solid var(--border); max-width: 460px; width: 90%; padding: 48px; position: relative; }
+.modal-x { position: absolute; top: 20px; right: 20px; background: none; border: none; color: var(--muted); font-size: 18px; cursor: pointer; font-family: 'DM Mono', monospace; }
+.modal-x:hover { color: var(--ink); }
+.m-eye { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+.m-ind { font-family: 'DM Serif Display', serif; font-size: 32px; line-height: 1; margin-bottom: 6px; color: var(--ink); }
+.m-sub { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 24px; }
+.modal p { font-size: 15px; line-height: 1.75; color: var(--muted); margin-bottom: 24px; font-weight: 300; }
+.m-input { width: 100%; background: var(--cream); border: 1px solid var(--border); color: var(--ink); padding: 14px 16px; font-family: 'DM Mono', monospace; font-size: 13px; outline: none; margin-bottom: 10px; }
+.m-input:focus { border-color: var(--accent); }
+.m-input::placeholder { color: var(--muted); }
+.m-submit { width: 100%; background: var(--accent); color: var(--white); border: none; padding: 14px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+.m-submit:hover { background: var(--accent-l); }
+.m-note { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); text-align: center; margin-top: 10px; letter-spacing: 0.06em; }
+.m-success { display: none; text-align: center; padding: 16px 0; }
+.m-success .check { font-family: 'DM Serif Display', serif; font-size: 3rem; color: var(--accent); margin-bottom: 16px; }
+.m-success h3 { font-family: 'DM Serif Display', serif; font-size: 28px; margin-bottom: 12px; color: var(--ink); }
+.m-success p { font-size: 15px; color: var(--muted); line-height: 1.75; margin-bottom: 0; }
 
-@media (max-width: 900px) {
-  .summary-band { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-  .dist-grid { grid-template-columns: 1fr; gap: 2rem; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.hero-eyebrow { animation: fadeUp 0.6s ease both; }
+.hero-title    { animation: fadeUp 0.6s 0.1s ease both; }
+.hero-body     { animation: fadeUp 0.6s 0.2s ease both; }
+.hero-btns     { animation: fadeUp 0.6s 0.3s ease both; }
+
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { border-right: none; border-bottom: 1px solid var(--border); }
+  .hero-right { padding: 48px; }
+  .dist-inner { grid-template-columns: 1fr; gap: 40px; }
   .audit-strip { flex-direction: column; align-items: flex-start; }
+  .method-grid { grid-template-columns: 1fr; }
+  footer { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  nav { padding: 0.875rem 1.25rem; height: 56px; }
+  .site-header { padding: 16px 24px; }
   .nav-links a:not(.nav-cta) { display: none; }
-  .nav-cta { font-size: 0.6rem !important; padding: 0.4rem 0.9rem !important; }
-  .hero { grid-template-columns: 1fr; padding: 72px 1.25rem 2.5rem; gap: 2rem; }
-  h1 { font-size: clamp(3.5rem, 14vw, 5rem); }
-  .hero-btns { flex-direction: column; }
-  .btn-p, .btn-g { text-align: center; }
-  .stat-grid { grid-template-columns: 1fr 1fr; }
-  .stat-val { font-size: 2.5rem; }
-  .section, .dist-section { padding: 2.5rem 1.25rem; }
-  .summary-band { margin: 0 1.25rem; }
-  .audit-strip { padding: 2rem 1.25rem; }
-  .sec-hdr { flex-direction: column; gap: 0.5rem; }
+  section { padding: 64px 24px; }
+  .hero-left { padding: 56px 24px; }
+  .hero-right { padding: 40px 24px; }
+  .dist-panel { padding: 56px 24px; }
+  .audit-strip { padding: 48px 24px; }
+  .cta-sec { padding: 64px 24px; }
+  footer { padding: 48px 24px; }
   .ind-grid { grid-template-columns: 1fr; }
-  .method-grid { grid-template-columns: 1fr; }
-  .cta-sec { padding: 4rem 1.25rem; }
   .cta-actions { flex-direction: column; align-items: center; }
-  .footer-top { flex-direction: column; gap: 2rem; padding: 2rem 1.25rem 1.5rem; }
-  .footer-links { flex-direction: column; gap: 1.5rem; }
-  .footer-bottom { padding: 1.25rem; }
-  .modal { padding: 2rem 1.5rem; }
+  .modal { padding: 32px 24px; }
 }
 </style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"AI Brand Index 2026","description":"Aggregate AI brand visibility scores for 461 companies across 10 industries, measured by AIsubtext using a proprietary multi-engine audit methodology.","url":"https://index.aisubtext.ai","publisher":{"@type":"Organization","name":"AIsubtext","url":"https://aisubtext.ai","email":"hello@aisubtext.ai"},"datePublished":"2026-02-01","temporalCoverage":"2025-10/2026-02","license":"https://aisubtext.ai/terms","variableMeasured":"AI brand visibility score (0–100)","measurementTechnique":"Multi-engine AI query testing and response accuracy scoring across ChatGPT and Perplexity"}
+</script>
 </head>
 <body>
 
-<div class="cur" id="cur"></div>
-<div class="cur-ring" id="curRing"></div>
-
-<nav>
-  <a href="https://aisubtext.ai" class="logo">AI<span>subtext</span></a>
+<header class="site-header">
+  <a href="https://aisubtext.ai" class="logo">AI<span>subtext</span>.ai</a>
   <div class="nav-links">
     <a href="#index">2026 Index</a>
     <a href="#methodology">Methodology</a>
     <a href="https://audit.aisubtext.ai" class="nav-cta">Audit My Brand →</a>
   </div>
-</nav>
+</header>
 
-<section class="hero">
-  <div>
-    <div class="eyebrow">AIsubtext · 2026 Annual Report</div>
-    <h1>AI Brand<em>Index</em>2026</h1>
-    <p class="hero-sub">We measured how ChatGPT, Perplexity, and other AI systems describe over <strong>5,600 companies</strong> across 10 industries. Most brands are invisible to AI — and don't know it.</p>
+<!-- HERO -->
+<section class="hero" style="padding:0;border:none;">
+  <div class="hero-left">
+    <div class="hero-eyebrow">AIsubtext · AI Brand Index · 2026</div>
+    <h1 class="hero-title">AI is describing<br>your brand<br><em>wrong.</em></h1>
+    <p class="hero-body">We tested 5,600+ companies across 10 industries. In most cases, what AI tells buyers about your brand bears little resemblance to what you say about yourself.</p>
+    <p class="hero-note">461 companies scored · Feb 2026 · ChatGPT &amp; Perplexity</p>
     <div class="hero-btns">
-      <a href="#index" class="btn-p">↓ Explore the Index</a>
-      <a href="https://audit.aisubtext.ai" class="btn-g">Score My Brand</a>
+      <a href="#index" class="btn-p">See the Data ↓</a>
+      <a href="https://audit.aisubtext.ai" class="btn-g">Score My Brand →</a>
     </div>
   </div>
-  <div class="stat-grid">
-    <div class="stat">
-      <div class="stat-val">5,600+</div>
-      <div class="stat-lbl">Companies Scanned</div>
+  <div class="hero-right">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-val">54</div>
+        <div class="stat-lbl">Average AI Score /100</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">10</div>
+        <div class="stat-lbl">Industries Analyzed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">43%</div>
+        <div class="stat-lbl">Score Below 40/100</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">68</div>
+        <div class="stat-lbl">Best Industry Avg (Consumer)</div>
+      </div>
     </div>
-    <div class="stat">
-      <div class="stat-val">54</div>
-      <div class="stat-lbl">Average AI Score /100</div>
-    </div>
-    <div class="stat">
-      <div class="stat-val">10</div>
-      <div class="stat-lbl">Industries Analyzed</div>
-    </div>
-    <div class="stat">
-      <div class="stat-val">43%</div>
-      <div class="stat-lbl">Score Below 40/100</div>
+    <div class="hero-right-note">
+      Scores reflect AI engine outputs as of February 2026.<br>
+      Individual company scores available via full audit.<br>
+      Industry aggregates shown. Data updated quarterly.
     </div>
   </div>
 </section>
 
-<div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
-
-<!-- SUMMARY BAND -->
-<div class="summary-band">
-  <div class="sb-item">
-    <div class="sb-val">54</div>
-    <div class="sb-lbl">Overall Average Score</div>
-  </div>
-  <div class="sb-item">
-    <div class="sb-val">54</div>
-    <div class="sb-lbl">Overall Median Score</div>
-  </div>
-  <div class="sb-item">
-    <div class="sb-val">68</div>
-    <div class="sb-lbl">Highest Avg Industry (Consumer)</div>
-  </div>
-  <div class="sb-item">
-    <div class="sb-val">43</div>
-    <div class="sb-lbl">Lowest Avg Industry (CleanTech)</div>
-  </div>
-</div>
-
 <!-- INDUSTRY INDEX -->
-<section class="section" id="index">
-  <div class="sec-hdr">
-    <h2 class="sec-title">By Industry</h2>
-    <span class="sec-meta">461 companies · Feb 2026</span>
-  </div>
+<section id="index">
+  <div class="section-label">2026 Annual Report</div>
+  <h2 class="section-title">AI Visibility by Industry</h2>
+  <p class="section-body">How accurately do AI engines describe brands in your sector? Click any industry to request the full breakdown.</p>
   <div class="ind-grid" id="indGrid"></div>
 </section>
 
-<!-- SCORE DISTRIBUTION -->
-<section class="dist-section alt section">
-  <div class="sec-hdr">
-    <h2 class="sec-title">Score Distribution</h2>
-    <span class="sec-meta">Across all 461 companies</span>
-  </div>
-  <div class="dist-grid">
+<!-- DISTRIBUTION PANEL -->
+<div class="dist-panel">
+  <div class="dist-inner">
     <div>
-      <div class="dist-label">Brands scoring below 40</div>
-      <div class="dist-big"><span>43</span>%</div>
-      <p class="dist-copy">Nearly half the companies we analyzed score below 40/100 — meaning AI engines consistently underrepresent, mischaracterize, or ignore them entirely in buyer research queries.</p>
+      <div class="dist-label">Key Finding</div>
+      <div class="dist-big"><em>43</em>%</div>
+      <p class="dist-copy">Nearly half the companies we tested score below 40/100 — meaning AI engines consistently misrepresent or skip them when buyers ask about their category.</p>
     </div>
     <div class="dist-bars" id="distBars"></div>
   </div>
-</section>
+</div>
 
 <!-- AUDIT STRIP -->
 <div class="audit-strip">
-  <div class="audit-strip-text">
-    <h3>Where does your brand land?</h3>
-    <p>Individual company scores are available via a full audit. Enter your domain and we'll show you exactly how AI engines describe your brand — and where you stand relative to your industry.</p>
+  <div>
+    <h3>Where does your<br>brand land?</h3>
+    <p>Individual scores are available via a full audit. Enter your domain and see exactly how AI engines describe your brand — and where you stand in your industry.</p>
   </div>
-  <a href="https://audit.aisubtext.ai" class="btn-p" style="white-space:nowrap;padding:1rem 2rem;font-size:0.72rem;">Get My Free Score →</a>
+  <a href="https://audit.aisubtext.ai" class="btn-inv">Get My Free Score →</a>
 </div>
 
 <!-- METHODOLOGY -->
-<section class="section" id="methodology">
-  <div class="sec-hdr">
-    <h2 class="sec-title">Methodology</h2>
-    <span class="sec-meta">How we measure AI brand visibility</span>
-  </div>
+<section id="methodology">
+  <div class="section-label">How We Measure</div>
+  <h2 class="section-title">Methodology</h2>
+  <p class="section-body">Every company in the index is scored using the same three-step process — no manual curation, no exceptions.</p>
   <div class="method-grid">
     <div class="method-card">
       <div class="method-num">01</div>
       <div class="method-title">Query Generation</div>
-      <div class="method-desc">For each company we generate targeted questions a buyer would ask — simulating real purchase research across AI assistants.</div>
+      <p class="method-desc">For each company we generate the questions a real buyer would ask — simulating purchase research across AI assistants.</p>
     </div>
     <div class="method-card">
       <div class="method-num">02</div>
       <div class="method-title">Multi-Engine Testing</div>
-      <div class="method-desc">Questions are submitted to ChatGPT and Perplexity — the two AI systems most used for brand research and vendor discovery.</div>
+      <p class="method-desc">Queries are submitted to ChatGPT and Perplexity — the two AI systems most used for brand research and vendor discovery.</p>
     </div>
     <div class="method-card">
       <div class="method-num">03</div>
       <div class="method-title">Accuracy Scoring</div>
-      <div class="method-desc">Responses are evaluated on accuracy, completeness, tone, and representation quality. Scores reflect how well AI describes the brand — 0 to 100.</div>
+      <p class="method-desc">Responses are evaluated across four dimensions: category accuracy, explanation quality, context relevance, and feature recognition. Scores run 0–100.</p>
     </div>
   </div>
-  <p style="margin-top:2rem;font-size:0.75rem;color:#888;font-family:'DM Mono',monospace;line-height:1.9;">
-    Scores reflect AI representation as of February 2026 · Full 4-engine audits available via the AIsubtext platform · <a href="/cdn-cgi/l/email-protection#bbd3ded7d7d4fbdad2c8ced9cfdec3cf95dad2" style="color:#ff4d1c"><span class="__cf_email__" data-cfemail="5f373a3333301f3e362c2a3d2b3a272b713e36">[email&#160;protected]</span></a>
+  <p style="margin-top:2rem;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);line-height:1.9;letter-spacing:0.04em;">
+    Scores reflect AI outputs as of February 2026 · Full 4-engine audits via the AIsubtext platform · <a href="mailto:hello@aisubtext.ai" style="color:var(--accent)">hello@aisubtext.ai</a>
   </p>
 </section>
 
-<section class="cta-sec">
-  <h2>YOUR BRAND<br>DESERVES<br><span style="color:#ff4d1c">BETTER</span></h2>
-  <p>Low AI visibility means lost deals. When buyers ask AI about your category, competitors show up — you don't. We fix that.</p>
+<!-- CTA -->
+<section class="cta-sec" style="border-bottom:1px solid var(--border);">
+  <h2>Your brand.<br><em>Described wrong.</em><br>We fix that.</h2>
+  <p>When buyers ask AI about your category, your competitors show up correctly. You might not. We measure it and correct it.</p>
   <div class="cta-actions">
-    <a href="https://audit.aisubtext.ai" class="btn-p" style="padding:1rem 2.5rem;font-size:0.75rem;">Get My Free Audit →</a>
-    <a href="https://brand.aisubtext.ai" class="btn-g" style="padding:1rem 2.5rem;font-size:0.75rem;">See How It Works</a>
+    <a href="https://audit.aisubtext.ai" class="btn-p" style="padding:16px 32px;font-size:13px;">Get My Free Audit →</a>
+    <a href="https://brand.aisubtext.ai" class="btn-g" style="padding:16px 32px;font-size:13px;">See How It Works</a>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer itemscope itemtype="https://schema.org/Organization">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <div class="footer-brand-name" itemprop="name">AI<span>subtext</span></div>
-      <div class="footer-brand-desc" itemprop="description">AI Brand Intelligence Platform. We measure how AI systems describe and represent companies.</div>
+  <div>
+    <div class="footer-brand">AI<span>subtext</span> · Official Brand Intelligence Page</div>
+    <div class="footer-legal">
+      <strong style="color:#7a7268;">Data Disclaimer:</strong> The AI Brand Index 2026 presents aggregate scoring data derived from AIsubtext's proprietary audit methodology. Scores reflect AI engine outputs observed during testing in Q4 2025–Q1 2026 and are subject to change as underlying AI models are updated. Individual company scores are not published on this page. All company names and trademarks referenced are the property of their respective owners. AIsubtext is not affiliated with, endorsed by, or sponsored by any company referenced in this index. Provided for informational purposes only.
+      &nbsp;·&nbsp;<a href="https://aisubtext.ai/privacy">Privacy Policy</a>&nbsp;·&nbsp;<a href="https://aisubtext.ai/terms">Terms of Use</a>
     </div>
-    <div class="footer-links">
-      <div class="footer-col">
-        <div class="footer-col-title">Platform</div>
-        <a href="https://audit.aisubtext.ai">Free Brand Audit</a>
-        <a href="https://brand.aisubtext.ai">How It Works</a>
-        <a href="https://aisubtext.ai/pricing">Pricing</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Research</div>
-        <a href="https://index.aisubtext.ai">AI Brand Index 2026</a>
-        <a href="https://aisubtext.ai/methodology">Methodology</a>
-        <a href="https://aisubtext.ai/blog">Blog</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Company</div>
-        <a href="https://aisubtext.ai/about">About</a>
-        <a href="/cdn-cgi/l/email-protection#deb6bbb2b2b19ebfb7adabbcaabba6aaf0bfb7" itemprop="email"><span class="__cf_email__" data-cfemail="761e131a1a1936171f05031402130e0258171f">[email&#160;protected]</span></a>
-        <a href="https://linkedin.com/company/aisubtext">LinkedIn</a>
-      </div>
-    </div>
+    <div class="footer-copy">© 2026 AIsubtext · AI Brand Intelligence · aisubtext.ai</div>
   </div>
-  <div class="footer-bottom">
-    <p class="footer-legal">
-      <strong style="color:#888">Data &amp; Methodology Disclaimer:</strong> The AI Brand Index 2026 presents aggregate scoring data derived from AIsubtext's proprietary audit methodology. Scores reflect AI engine outputs as observed during testing periods in Q4 2025 – Q1 2026 and are subject to change as underlying AI models are updated. Individual company scores are not published on this page. All company names and trademarks referenced in AIsubtext research are the property of their respective owners and are used solely for identification and benchmarking purposes. AIsubtext is not affiliated with, endorsed by, or sponsored by any company referenced in this index. This report is provided for informational purposes only and does not constitute professional advice.
-      <a href="https://aisubtext.ai/privacy">Privacy Policy</a> · <a href="https://aisubtext.ai/terms">Terms of Use</a>
-    </p>
-    <div class="footer-copy">© 2026 AIsubtext · AI Brand Intelligence · <span itemprop="url">aisubtext.ai</span></div>
+  <div class="footer-note" style="text-align:right;">
+    <div>Category: AI Brand Intelligence</div>
+    <div>Report: AI Brand Index 2026</div>
+    <div>Coverage: 461 companies · 10 industries</div>
+    <div>Founder: Yoram · Brooklyn, NY</div>
+    <div>Website: <a href="https://aisubtext.ai" style="color:var(--accent)">aisubtext.ai</a></div>
+    <div style="margin-top:16px;">Index: <a href="https://index.aisubtext.ai" style="color:var(--accent)">index.aisubtext.ai</a></div>
+    <div>Audit: <a href="https://audit.aisubtext.ai" style="color:var(--accent)">audit.aisubtext.ai</a></div>
   </div>
 </footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Dataset",
-  "name": "AI Brand Index 2026",
-  "description": "Aggregate AI brand visibility scores for 461 companies across 10 industries, measured by AIsubtext using a proprietary multi-engine audit methodology.",
-  "url": "https://index.aisubtext.ai",
-  "publisher": {
-    "@type": "Organization",
-    "name": "AIsubtext",
-    "url": "https://aisubtext.ai",
-    "email": "hello@aisubtext.ai"
-  },
-  "datePublished": "2026-02-01",
-  "temporalCoverage": "2025-10/2026-02",
-  "license": "https://aisubtext.ai/terms",
-  "variableMeasured": "AI brand visibility score (0–100)",
-  "measurementTechnique": "Multi-engine AI query testing and response accuracy scoring across ChatGPT and Perplexity"
-}
-</script>
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modal">
   <div class="modal">
     <button class="modal-x" onclick="closeModal()">✕</button>
     <div id="mForm">
-      <div class="m-eye">Get Your Industry Score</div>
+      <div class="m-eye">Industry Report</div>
       <div class="m-ind" id="mInd"></div>
       <div class="m-sub" id="mSub"></div>
-      <p>Enter your work email and we'll send you a full breakdown of how AI describes companies in your space — plus how to improve your own score.</p>
+      <p>Enter your work email and we'll send you a full breakdown of how AI describes companies in this space — plus how to improve your own score.</p>
       <input type="email" class="m-input" id="mEmail" placeholder="you@company.com">
       <input type="hidden" id="mIndVal">
       <button class="m-submit" onclick="submitClaim()">Send Me the Full Report →</button>
-      <p style="font-size:0.65rem;color:#888;margin-top:0.75rem;margin-bottom:0;text-align:center;">Work email required · No spam</p>
+      <div class="m-note">Work email required · No spam</div>
     </div>
     <div class="m-success" id="mSuccess">
       <div class="check">✓</div>
-      <h3>You're on the list</h3>
+      <h3>You're on the list.</h3>
       <p>We'll send your full AI brand report to <strong id="mSuccessEmail"></strong> within 24 hours.</p>
     </div>
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// ── CURSOR
-const cur = document.getElementById('cur');
-const curRing = document.getElementById('curRing');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
-(function loop(){
-  if(cur){cur.style.left=mx+'px';cur.style.top=my+'px';}
-  rx+=(mx-rx)*0.1;ry+=(my-ry)*0.1;
-  if(curRing){curRing.style.left=rx+'px';curRing.style.top=ry+'px';}
-  requestAnimationFrame(loop);
-})();
-document.querySelectorAll('a,button,input').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{if(curRing){curRing.style.width='48px';curRing.style.height='48px';}});
-  el.addEventListener('mouseleave',()=>{if(curRing){curRing.style.width='36px';curRing.style.height='36px';}});
-});
-
-// ── DATA
+<script>
 const INDUSTRIES = [
-  {name:'Consumer',    avg:68,median:72,low:37,high:91,count:40},
-  {name:'EdTech',      avg:58,median:59,low:33,high:84,count:39},
-  {name:'B2B SaaS',    avg:57,median:58,low:27,high:88,count:84},
-  {name:'DevTools',    avg:57,median:56,low:28,high:92,count:57},
+  {name:'Consumer',     avg:68,median:72,low:37,high:91,count:40},
+  {name:'EdTech',       avg:58,median:59,low:33,high:84,count:39},
+  {name:'B2B SaaS',     avg:57,median:58,low:27,high:88,count:84},
+  {name:'DevTools',     avg:57,median:56,low:28,high:92,count:57},
   {name:'Cybersecurity',avg:55,median:55,low:25,high:85,count:38},
-  {name:'Fintech',     avg:54,median:53,low:26,high:89,count:45},
-  {name:'MarTech',     avg:52,median:50,low:27,high:82,count:44},
-  {name:'HR Tech',     avg:51,median:50,low:27,high:84,count:39},
-  {name:'HealthTech',  avg:44,median:42,low:22,high:71,count:40},
-  {name:'CleanTech',   avg:43,median:40,low:21,high:91,count:35},
+  {name:'Fintech',      avg:54,median:53,low:26,high:89,count:45},
+  {name:'MarTech',      avg:52,median:50,low:27,high:82,count:44},
+  {name:'HR Tech',      avg:51,median:50,low:27,high:84,count:39},
+  {name:'HealthTech',   avg:44,median:42,low:22,high:71,count:40},
+  {name:'CleanTech',    avg:43,median:40,low:21,high:91,count:35},
 ];
-
-const TICKER_INDUSTRIES = [
-  'B2B SaaS','Fintech','MarTech','HR Tech','DevTools',
-  'HealthTech','EdTech','Consumer','Cybersecurity','CleanTech'
-];
-
 const DIST = [
-  {range:'80 – 100',pct:10,color:'#00c896'},
-  {range:'60 – 79', pct:22,color:'#4dc8a0'},
-  {range:'40 – 59', pct:25,color:'#f5a623'},
-  {range:'20 – 39', pct:35,color:'#ff4d1c'},
-  {range:'0 – 19',  pct:8, color:'#cc2200'},
+  {range:'80–100', pct:10, color:'#6a9a6a'},
+  {range:'60–79',  pct:22, color:'#8aaa7a'},
+  {range:'40–59',  pct:25, color:'#c8a87a'},
+  {range:'20–39',  pct:35, color:'#c8410a'},
+  {range:'0–19',   pct:8,  color:'#8a3010'},
 ];
-
-function sc(n){ return n>=70?'#00c896':n>=40?'#f5a623':'#ff4d1c'; }
+function sc(n){ return n>=70?'#6a9a6a':n>=40?'#c8a87a':'#c8410a'; }
 function grade(n){ return n>=70?'A':n>=55?'B':n>=40?'C':'D'; }
 
 function renderIndustries(){
   document.getElementById('indGrid').innerHTML = INDUSTRIES.map(ind => {
-    const c = sc(ind.avg);
-    const g = grade(ind.avg);
+    const c = sc(ind.avg), g = grade(ind.avg);
     return `<div class="ind-card" onclick="openModal('${ind.name}','${ind.avg}','${ind.median}','${ind.count}')">
       <div class="ind-top">
-        <div>
-          <div class="ind-name">${ind.name}</div>
-          <div class="ind-count">${ind.count} companies analyzed</div>
-        </div>
+        <div><div class="ind-name">${ind.name}</div><div class="ind-count">${ind.count} companies analyzed</div></div>
         <div class="ind-grade" style="color:${c}">${g}</div>
       </div>
-      <div class="ind-bar-wrap">
-        <div class="ind-bar-track"><div class="ind-bar-fill" style="width:${ind.avg}%;background:${c}"></div></div>
-        <div class="ind-bar-labels">
-          <span class="ind-bar-label">0</span>
-          <span class="ind-bar-label">50</span>
-          <span class="ind-bar-label">100</span>
-        </div>
-      </div>
+      <div class="ind-bar-track"><div class="ind-bar-fill" style="width:${ind.avg}%;background:${c}"></div></div>
+      <div class="ind-bar-labels"><span class="ind-bar-label">0</span><span class="ind-bar-label">50</span><span class="ind-bar-label">100</span></div>
       <div class="ind-stats">
-        <div class="ind-stat">
-          <div class="ind-stat-val" style="color:${c}">${ind.avg}</div>
-          <div class="ind-stat-lbl">Avg Score</div>
-        </div>
-        <div class="ind-stat">
-          <div class="ind-stat-val" style="color:rgba(245,242,235,0.7)">${ind.median}</div>
-          <div class="ind-stat-lbl">Median</div>
-        </div>
-        <div class="ind-stat">
-          <div class="ind-stat-val" style="color:rgba(245,242,235,0.4)">${ind.low}–${ind.high}</div>
-          <div class="ind-stat-lbl">Range</div>
-        </div>
-      </div>
-    </div>`;
+        <div class="ind-stat"><div class="ind-stat-val" style="color:${c}">${ind.avg}</div><div class="ind-stat-lbl">Avg Score</div></div>
+        <div class="ind-stat"><div class="ind-stat-val" style="color:#7a7268">${ind.low}</div><div class="ind-stat-lbl">Lowest</div></div>
+        <div class="ind-stat"><div class="ind-stat-val" style="color:#7a7268">${ind.high}</div><div class="ind-stat-lbl">Highest</div></div>
+      </div></div>`;
   }).join('');
 }
 
-function renderDistribution(){
-  document.getElementById('distBars').innerHTML = DIST.map(d=>`
-    <div class="dist-row">
+function renderDist(){
+  document.getElementById('distBars').innerHTML = DIST.map(d =>
+    `<div class="dist-row">
       <span class="dist-range">${d.range}</span>
       <div class="dist-track"><div class="dist-fill" style="width:${d.pct*3}%;background:${d.color}"></div></div>
       <span class="dist-pct" style="color:${d.color}">${d.pct}%</span>
-    </div>
-  `).join('');
+    </div>`
+  ).join('');
 }
 
-function buildTicker(){
-  const items = TICKER_INDUSTRIES.map(name=>{
-    const ind = INDUSTRIES.find(i=>i.name===name);
-    return `<span data-score="avg ${ind.avg}/100">${name}</span>`;
-  }).join('');
-  document.getElementById('ticker').innerHTML = items+items+items;
-}
-
-// ── MODAL
-function openModal(ind, avg, median, count){
+function openModal(ind,avg,median,count){
   document.getElementById('mInd').textContent = ind;
-  document.getElementById('mSub').textContent = `${count} companies · avg ${avg}/100 · median ${median}/100`;
+  document.getElementById('mSub').textContent = `${count} companies · avg ${avg}/100`;
   document.getElementById('mIndVal').value = ind;
   document.getElementById('mEmail').value = '';
   document.getElementById('mEmail').style.borderColor = '';
@@ -515,14 +411,20 @@ function openModal(ind, avg, median, count){
   document.getElementById('modal').classList.add('open');
 }
 function closeModal(){ document.getElementById('modal').classList.remove('open'); }
-document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+document.getElementById('modal').addEventListener('click',function(e){ if(e.target===this) closeModal(); });
 
 async function submitClaim(){
   const email = document.getElementById('mEmail').value.trim();
   const free = ['gmail','yahoo','hotmail','outlook','icloud','protonmail'];
-  if(!email||!email.includes('@')){document.getElementById('mEmail').style.borderColor='#ff4d1c';return;}
-  if(free.includes(email.split('@')[1]?.split('.')[0])){
-    document.getElementById('mEmail').placeholder='Work email required';
-    document.getElementById('mEmail').value='';
-    return;
-  }
+  if(!email||!email.includes('@')){ document.getElementById('mEmail').style.borderColor='#c8410a'; return; }
+  if(free.includes(email.split('@')[1]?.split('.')[0])){ document.getElementById('mEmail').placeholder='Work email required'; document.getElementById('mEmail').value=''; return; }
+  document.getElementById('mSuccessEmail').textContent = email;
+  document.getElementById('mForm').style.display = 'none';
+  document.getElementById('mSuccess').style.display = 'block';
+  try { await fetch('https://aisubtext-monitor-production.up.railway.app/api/claim',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,industry:document.getElementById('mIndVal').value,source:'index-industry'})}); } catch(e){}
+}
+
+window.addEventListener('load', function(){ renderIndustries(); renderDist(); });
+</script>
+</body>
+</html>

@@ -1,11 +1,11 @@
-<!-- AIsubtext AI Brand Index 2026 - v8.0 -->
+<!-- AIsubtext AI Brand Index 2026 - v10.0 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Brand Index 2026 — How AI Describes Your Company | AIsubtext</title>
-<meta name="description" content="We scanned 5,600+ companies to measure AI brand visibility, accuracy, and LLM presence.">
+<meta name="description" content="We scanned 5,600+ companies across 10 industries to measure AI brand visibility. See how your industry stacks up.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -13,11 +13,9 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { background: #080808; color: #f5f2eb; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; }
 
-/* CURSOR */
 .cur { position: fixed; width: 10px; height: 10px; background: #ff4d1c; border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); }
 .cur-ring { position: fixed; width: 36px; height: 36px; border: 2px solid rgba(255,77,28,0.7); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: width 0.15s, height 0.15s; }
 
-/* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 3rem; background: rgba(8,8,8,0.97); border-bottom: 1px solid rgba(255,255,255,0.08); height: 60px; }
 .logo { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.4rem; letter-spacing: 0.08em; color: #f5f2eb; text-decoration: none; }
 .logo span { color: #ff4d1c; }
@@ -26,7 +24,6 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 .nav-links a:hover { color: #f5f2eb; }
 .nav-cta { background: #ff4d1c !important; color: #080808 !important; padding: 0.45rem 1.25rem !important; font-weight: 500 !important; }
 
-/* HERO - sits directly under nav */
 .hero { padding: 80px 3rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 .eyebrow { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: #ff4d1c; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
 .eyebrow::before { content: ''; display: block; width: 2rem; height: 1px; background: #ff4d1c; }
@@ -40,96 +37,112 @@ h1 em { font-style: normal; color: #ff4d1c; display: block; }
 .btn-g { color: #f5f2eb; padding: 0.875rem 2rem; font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(245,242,235,0.2); display: inline-block; }
 .btn-g:hover { border-color: #f5f2eb; }
 
-/* STAT GRID */
-.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); }
-.stat { background: #080808; padding: 2rem; }
-.stat.hl { background: #ff4d1c; }
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(255,255,255,0.2); }
+.stat { padding: 2rem; }
+.stat:nth-child(1) { background: #080808; border-right: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.2); }
+.stat:nth-child(2) { background: #ff4d1c; border-bottom: 1px solid rgba(255,255,255,0.2); }
+.stat:nth-child(3) { background: #ff4d1c; border-right: 1px solid rgba(255,255,255,0.2); }
+.stat:nth-child(4) { background: #080808; }
 .stat-val { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 3.5rem; line-height: 1; margin-bottom: 0.5rem; color: #f5f2eb; }
-.stat.hl .stat-val { color: #080808; }
-.stat-lbl { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888; }
-.stat.hl .stat-lbl { color: rgba(8,8,8,0.6); }
+.stat-lbl { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,242,235,0.6); }
 
-/* TICKER */
 .ticker-wrap { overflow: hidden; white-space: nowrap; padding: 0.8rem 0; background: #111; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); }
-.ticker { display: inline-block; animation: tick 35s linear infinite; }
-.ticker span { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: #f5f2eb; padding: 0 2.5rem; }
-.ticker span.hi { color: #00c896; }
-.ticker span.lo { color: #ff4d1c; }
+.ticker { display: inline-block; animation: tick 50s linear infinite; }
+.ticker span { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,235,0.4); padding: 0 2.5rem; }
+.ticker span::after { content: attr(data-score); color: #ff4d1c; margin-left: 0.5rem; }
 @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* SECTIONS */
 .section { padding: 5rem 3rem; }
 .section.alt { background: #111; }
 .sec-hdr { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 3rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
 .sec-title { font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(2.5rem, 4vw, 4rem); color: #f5f2eb; }
 .sec-meta { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888; }
 
-/* FILTERS + SEARCH */
-.filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-.fbtn { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.4rem 1rem; border: 1px solid rgba(255,255,255,0.1); background: transparent; color: #888; cursor: pointer; }
-.fbtn:hover, .fbtn.active { border-color: #ff4d1c; color: #ff4d1c; }
-.search { width: 100%; background: #111; border: 1px solid rgba(255,255,255,0.1); color: #f5f2eb; padding: 0.875rem 1.25rem; font-family: 'DM Mono', monospace; font-size: 0.78rem; margin-bottom: 1.5rem; outline: none; }
-.search:focus { border-color: #ff4d1c; }
-.search::placeholder { color: #888; }
+/* ── INDUSTRY CARDS */
+.ind-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); }
+.ind-card { background: #0d0d0d; padding: 2rem 2rem 1.75rem; transition: background 0.15s; cursor: default; }
+.ind-card:hover { background: #141414; }
+.ind-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; }
+.ind-name { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.8rem; line-height: 1; color: #f5f2eb; }
+.ind-count { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888; margin-top: 0.3rem; }
+.ind-grade { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 3.5rem; line-height: 1; }
+.ind-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.25rem; margin-top: 0.25rem; }
+.ind-stat { text-align: center; padding: 0 0.5rem; }
+.ind-stat + .ind-stat { border-left: 1px solid rgba(255,255,255,0.06); }
+.ind-stat-val { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.6rem; line-height: 1; margin-bottom: 0.3rem; }
+.ind-stat-lbl { font-family: 'DM Mono', monospace; font-size: 0.52rem; letter-spacing: 0.12em; text-transform: uppercase; color: #888; }
+.ind-bar-wrap { margin: 1.25rem 0 0; }
+.ind-bar-track { width: 100%; height: 2px; background: rgba(255,255,255,0.07); border-radius: 2px; overflow: hidden; }
+.ind-bar-fill { height: 100%; border-radius: 2px; transition: width 0.6s ease; }
+.ind-bar-labels { display: flex; justify-content: space-between; margin-top: 0.5rem; }
+.ind-bar-label { font-family: 'DM Mono', monospace; font-size: 0.52rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; }
 
-/* TABLE */
-table { width: 100%; border-collapse: collapse; }
-th { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: #888; text-align: left; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
-th.r { text-align: right; }
-td { padding: 0.9rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.85rem; color: #f5f2eb; vertical-align: middle; }
-tr:hover td { background: rgba(255,255,255,0.025); }
-.rank { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: #888; }
-.co { font-weight: 500; color: #f5f2eb; }
-.co-url { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: #888; display: block; margin-top: 0.2rem; }
-.tag { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.6rem; border: 1px solid rgba(255,255,255,0.1); color: #888; }
-.score-wrap { display: flex; align-items: center; gap: 0.75rem; justify-content: flex-end; }
-.bar-bg { width: 80px; height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; }
-.bar-fill { height: 100%; border-radius: 2px; }
-.score-n { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.4rem; width: 44px; text-align: right; line-height: 1; }
-.claim-btn { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.8rem; border: 1px solid #ff4d1c; background: transparent; color: #ff4d1c; cursor: pointer; }
-.claim-btn:hover { background: #ff4d1c; color: #080808; }
-.vbadge { font-family: 'DM Mono', monospace; font-size: 0.52rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.18rem 0.5rem; }
-.v-hi { color: #00c896; border: 1px solid #00c896; }
-.v-md { color: #f5a623; border: 1px solid #f5a623; }
-.v-lo { color: #ff4d1c; border: 1px solid #ff4d1c; }
-.load-more { display: block; width: 100%; margin-top: 2rem; padding: 1rem; background: transparent; border: 1px solid rgba(255,255,255,0.1); color: #888; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; }
-.load-more:hover { border-color: #f5f2eb; color: #f5f2eb; }
+/* ── OVERALL SUMMARY BAR */
+.summary-band { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(255,255,255,0.2); margin: 0 3rem; }
+.sb-item { padding: 2rem; }
+.sb-item:nth-child(1) { background: #080808; border-right: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.2); }
+.sb-item:nth-child(2) { background: #ff4d1c; border-bottom: 1px solid rgba(255,255,255,0.2); }
+.sb-item:nth-child(3) { background: #ff4d1c; border-right: 1px solid rgba(255,255,255,0.2); }
+.sb-item:nth-child(4) { background: #080808; }
+.sb-val { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 3rem; line-height: 1; color: #f5f2eb; margin-bottom: 0.4rem; }
+.sb-lbl { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,242,235,0.6); }
 
-/* BREAKDOWN */
-.bd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); }
-.bd-card { background: #111; padding: 1.75rem; }
-.bd-ind { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888; margin-bottom: 1rem; }
-.bd-score { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 3rem; line-height: 1; margin-bottom: 0.25rem; }
-.bd-count { font-size: 0.72rem; color: rgba(245,242,235,0.35); }
+/* ── DISTRIBUTION */
+.dist-section { padding: 5rem 3rem; }
+.dist-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; }
+.dist-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888; margin-bottom: 0.75rem; }
+.dist-big { font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(4rem, 6vw, 7rem); line-height: 0.9; color: #f5f2eb; margin-bottom: 1rem; }
+.dist-big span { color: #ff4d1c; }
+.dist-copy { font-size: 0.85rem; line-height: 1.8; color: rgba(245,242,235,0.5); }
+.dist-bars { display: flex; flex-direction: column; gap: 0.75rem; }
+.dist-row { display: grid; grid-template-columns: 120px 1fr 60px; gap: 1rem; align-items: center; }
+.dist-range { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; }
+.dist-track { height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
+.dist-fill { height: 100%; border-radius: 3px; }
+.dist-pct { font-family: 'DM Mono', monospace; font-size: 0.68rem; text-align: right; }
 
-/* METHODOLOGY */
+/* ── AUDIT CTA STRIP */
+.audit-strip { background: #111; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.audit-strip-text h3 { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 2rem; margin-bottom: 0.5rem; }
+.audit-strip-text p { font-size: 0.85rem; color: rgba(245,242,235,0.5); line-height: 1.6; max-width: 500px; }
+
+/* ── METHODOLOGY */
 .method-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); margin-top: 3rem; }
 .method-card { background: #080808; padding: 2.5rem; }
 .method-num { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 3rem; color: #ff4d1c; margin-bottom: 1rem; }
 .method-title { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.75rem; color: #f5f2eb; }
 .method-desc { font-size: 0.78rem; line-height: 1.75; color: rgba(245,242,235,0.45); }
 
-/* CTA */
 .cta-sec { padding: 7rem 3rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.08); }
 .cta-sec h2 { font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(3.5rem,6vw,7rem); line-height: 0.93; margin-bottom: 1.5rem; color: #f5f2eb; }
 .cta-sec p { font-size: 1rem; color: rgba(245,242,235,0.55); max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.75; }
 .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-/* FOOTER */
-footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; }
-footer a { color: #888; text-decoration: none; }
-footer a:hover { color: #f5f2eb; }
+footer { border-top: 1px solid rgba(255,255,255,0.08); font-family: 'DM Mono', monospace; color: #888; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; padding: 2.5rem 3rem 2rem; gap: 3rem; }
+.footer-brand { flex-shrink: 0; }
+.footer-brand-name { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.4rem; letter-spacing: 0.08em; color: #f5f2eb; margin-bottom: 0.5rem; }
+.footer-brand-name span { color: #ff4d1c; }
+.footer-brand-desc { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; line-height: 1.6; max-width: 220px; }
+.footer-links { display: flex; gap: 4rem; }
+.footer-col-title { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: #f5f2eb; margin-bottom: 1rem; }
+.footer-col a { display: block; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; text-decoration: none; margin-bottom: 0.6rem; }
+.footer-col a:hover { color: #f5f2eb; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding: 1.5rem 3rem; }
+.footer-legal { font-size: 0.6rem; line-height: 1.8; color: rgba(136,136,136,0.7); letter-spacing: 0.03em; text-transform: none; }
+.footer-legal a { color: rgba(136,136,136,0.7); text-decoration: underline; }
+.footer-legal a:hover { color: #f5f2eb; }
+.footer-copy { font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-top: 1rem; }
 
-/* MODAL */
+/* ── MODAL */
 .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 1000; align-items: center; justify-content: center; }
 .modal-overlay.open { display: flex; }
 .modal { background: #080808; border: 1px solid rgba(255,255,255,0.12); max-width: 480px; width: 90%; padding: 3rem; position: relative; }
-.modal-x { position: absolute; top: 1.25rem; right: 1.25rem; background: none; border: none; color: #888; font-size: 1.25rem; cursor: pointer; line-height: 1; }
+.modal-x { position: absolute; top: 1.25rem; right: 1.25rem; background: none; border: none; color: #888; font-size: 1.25rem; cursor: pointer; }
 .modal-x:hover { color: #f5f2eb; }
 .m-eye { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #ff4d1c; margin-bottom: 1rem; }
-.m-co { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 2.5rem; line-height: 1; margin-bottom: 0.5rem; color: #f5f2eb; }
-.m-score { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: #888; margin-bottom: 1.75rem; }
-.m-score span { color: #ff4d1c; font-size: 1rem; }
+.m-ind { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 2.5rem; line-height: 1; margin-bottom: 0.5rem; color: #f5f2eb; }
+.m-sub { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: #888; margin-bottom: 1.75rem; }
 .modal p { font-size: 0.85rem; line-height: 1.75; color: rgba(245,242,235,0.6); margin-bottom: 1.75rem; }
 .m-input { width: 100%; background: #111; border: 1px solid rgba(255,255,255,0.1); color: #f5f2eb; padding: 0.875rem 1rem; font-family: 'DM Mono', monospace; font-size: 0.78rem; outline: none; margin-bottom: 0.75rem; }
 .m-input:focus { border-color: #ff4d1c; }
@@ -141,48 +154,32 @@ footer a:hover { color: #f5f2eb; }
 .m-success h3 { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 2rem; margin-bottom: 0.75rem; color: #00c896; }
 .m-success p { font-size: 0.85rem; color: rgba(245,242,235,0.6); line-height: 1.75; margin-bottom: 0; }
 
+@media (max-width: 900px) {
+  .summary-band { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .dist-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .audit-strip { flex-direction: column; align-items: flex-start; }
+}
 @media (max-width: 768px) {
-  /* NAV */
   nav { padding: 0.875rem 1.25rem; height: 56px; }
   .nav-links a:not(.nav-cta) { display: none; }
   .nav-cta { font-size: 0.6rem !important; padding: 0.4rem 0.9rem !important; }
-
-  /* HERO */
   .hero { grid-template-columns: 1fr; padding: 72px 1.25rem 2.5rem; gap: 2rem; }
   h1 { font-size: clamp(3.5rem, 14vw, 5rem); }
-  .hero-sub { font-size: 0.9rem; }
   .hero-btns { flex-direction: column; }
-  .btn-p, .btn-g { text-align: center; padding: 0.875rem 1.5rem; }
-
-  /* STAT GRID */
+  .btn-p, .btn-g { text-align: center; }
   .stat-grid { grid-template-columns: 1fr 1fr; }
   .stat-val { font-size: 2.5rem; }
-
-  /* SECTIONS */
-  .section { padding: 2.5rem 1.25rem; }
+  .section, .dist-section { padding: 2.5rem 1.25rem; }
+  .summary-band { margin: 0 1.25rem; }
+  .audit-strip { padding: 2rem 1.25rem; }
   .sec-hdr { flex-direction: column; gap: 0.5rem; }
-
-  /* TABLE - scrollable */
-  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  table { min-width: 560px; }
-  .filters { gap: 0.4rem; }
-  .fbtn { font-size: 0.58rem; padding: 0.35rem 0.75rem; }
-
-  /* BREAKDOWN */
-  .bd-grid { grid-template-columns: 1fr 1fr; }
-
-  /* METHODOLOGY */
+  .ind-grid { grid-template-columns: 1fr; }
   .method-grid { grid-template-columns: 1fr; }
-
-  /* CTA */
   .cta-sec { padding: 4rem 1.25rem; }
   .cta-actions { flex-direction: column; align-items: center; }
-  .cta-actions a { width: 100%; text-align: center; }
-
-  /* FOOTER */
-  footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 1.5rem 1.25rem; }
-
-  /* MODAL */
+  .footer-top { flex-direction: column; gap: 2rem; padding: 2rem 1.25rem 1.5rem; }
+  .footer-links { flex-direction: column; gap: 1.5rem; }
+  .footer-bottom { padding: 1.25rem; }
   .modal { padding: 2rem 1.5rem; }
 }
 </style>
@@ -205,27 +202,27 @@ footer a:hover { color: #f5f2eb; }
   <div>
     <div class="eyebrow">AIsubtext · 2026 Annual Report</div>
     <h1>AI Brand<em>Index</em>2026</h1>
-    <p class="hero-sub">We measured how ChatGPT, Perplexity, and other AI systems describe over 5,600 companies. The average score: <strong>34/100</strong>. Most brands are invisible to AI.</p>
+    <p class="hero-sub">We measured how ChatGPT, Perplexity, and other AI systems describe over <strong>5,600 companies</strong> across 10 industries. Most brands are invisible to AI — and don't know it.</p>
     <div class="hero-btns">
       <a href="#index" class="btn-p">↓ Explore the Index</a>
       <a href="https://audit.aisubtext.ai" class="btn-g">Score My Brand</a>
     </div>
   </div>
   <div class="stat-grid">
-    <div class="stat hl">
+    <div class="stat">
       <div class="stat-val">5,600+</div>
       <div class="stat-lbl">Companies Scanned</div>
     </div>
     <div class="stat">
-      <div class="stat-val">34</div>
+      <div class="stat-val">54</div>
       <div class="stat-lbl">Average AI Score /100</div>
     </div>
     <div class="stat">
-      <div class="stat-val">2</div>
-      <div class="stat-lbl">AI Engines Tested</div>
+      <div class="stat-val">10</div>
+      <div class="stat-lbl">Industries Analyzed</div>
     </div>
     <div class="stat">
-      <div class="stat-val" style="color:#ff4d1c">67%</div>
+      <div class="stat-val">43%</div>
       <div class="stat-lbl">Score Below 40/100</div>
     </div>
   </div>
@@ -233,46 +230,61 @@ footer a:hover { color: #f5f2eb; }
 
 <div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
 
+<!-- SUMMARY BAND -->
+<div class="summary-band">
+  <div class="sb-item">
+    <div class="sb-val">54</div>
+    <div class="sb-lbl">Overall Average Score</div>
+  </div>
+  <div class="sb-item">
+    <div class="sb-val">54</div>
+    <div class="sb-lbl">Overall Median Score</div>
+  </div>
+  <div class="sb-item">
+    <div class="sb-val">68</div>
+    <div class="sb-lbl">Highest Avg Industry (Consumer)</div>
+  </div>
+  <div class="sb-item">
+    <div class="sb-val">43</div>
+    <div class="sb-lbl">Lowest Avg Industry (CleanTech)</div>
+  </div>
+</div>
+
+<!-- INDUSTRY INDEX -->
 <section class="section" id="index">
   <div class="sec-hdr">
-    <h2 class="sec-title">The Index</h2>
-    <span class="sec-meta">Updated Feb 2026 · 5,600 companies</span>
-  </div>
-  <div class="filters">
-    <button class="fbtn active" onclick="filterBy(this,'all')">All</button>
-    <button class="fbtn" onclick="filterBy(this,'B2B SaaS')">B2B SaaS</button>
-    <button class="fbtn" onclick="filterBy(this,'Fintech')">Fintech</button>
-    <button class="fbtn" onclick="filterBy(this,'Cybersecurity')">Cybersecurity</button>
-    <button class="fbtn" onclick="filterBy(this,'MarTech')">MarTech</button>
-    <button class="fbtn" onclick="filterBy(this,'Consumer')">Consumer</button>
-    <button class="fbtn" onclick="filterBy(this,'HealthTech')">HealthTech</button>
-    <button class="fbtn" onclick="filterBy(this,'low')">⚠ Lowest</button>
-    <button class="fbtn" onclick="filterBy(this,'high')">★ Highest</button>
-  </div>
-  <input type="text" class="search" placeholder="Search company or domain..." id="searchInput" oninput="handleSearch()">
-  <div class="table-wrap"><table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Company</th>
-        <th>Industry</th>
-        <th class="r">AI Score</th>
-        <th class="r">Status</th>
-      </tr>
-    </thead>
-    <tbody id="tbody"></tbody>
-  </table>
-  </div><button class="load-more" onclick="loadMore()">Load More ↓</button>
-</section>
-
-<section class="section alt">
-  <div class="sec-hdr">
     <h2 class="sec-title">By Industry</h2>
-    <span class="sec-meta">Average AI visibility score per vertical</span>
+    <span class="sec-meta">461 companies · Feb 2026</span>
   </div>
-  <div class="bd-grid" id="bdGrid"></div>
+  <div class="ind-grid" id="indGrid"></div>
 </section>
 
+<!-- SCORE DISTRIBUTION -->
+<section class="dist-section alt section">
+  <div class="sec-hdr">
+    <h2 class="sec-title">Score Distribution</h2>
+    <span class="sec-meta">Across all 461 companies</span>
+  </div>
+  <div class="dist-grid">
+    <div>
+      <div class="dist-label">Brands scoring below 40</div>
+      <div class="dist-big"><span>43</span>%</div>
+      <p class="dist-copy">Nearly half the companies we analyzed score below 40/100 — meaning AI engines consistently underrepresent, mischaracterize, or ignore them entirely in buyer research queries.</p>
+    </div>
+    <div class="dist-bars" id="distBars"></div>
+  </div>
+</section>
+
+<!-- AUDIT STRIP -->
+<div class="audit-strip">
+  <div class="audit-strip-text">
+    <h3>Where does your brand land?</h3>
+    <p>Individual company scores are available via a full audit. Enter your domain and we'll show you exactly how AI engines describe your brand — and where you stand relative to your industry.</p>
+  </div>
+  <a href="https://audit.aisubtext.ai" class="btn-p" style="white-space:nowrap;padding:1rem 2rem;font-size:0.72rem;">Get My Free Score →</a>
+</div>
+
+<!-- METHODOLOGY -->
 <section class="section" id="methodology">
   <div class="sec-hdr">
     <h2 class="sec-title">Methodology</h2>
@@ -296,8 +308,7 @@ footer a:hover { color: #f5f2eb; }
     </div>
   </div>
   <p style="margin-top:2rem;font-size:0.75rem;color:#888;font-family:'DM Mono',monospace;line-height:1.9;">
-    Scores reflect AI representation as of February 2026 · Full 4-engine audits available via the AIsubtext platform ·
-    <a href="/cdn-cgi/l/email-protection#e28b8c86879aa2838b91978096879a96cc838b" style="color:#ff4d1c"><span class="__cf_email__" data-cfemail="4c25222829340c2d253f392e38293438622d25">[email&#160;protected]</span></a>
+    Scores reflect AI representation as of February 2026 · Full 4-engine audits available via the AIsubtext platform · <a href="/cdn-cgi/l/email-protection#bbd3ded7d7d4fbdad2c8ced9cfdec3cf95dad2" style="color:#ff4d1c"><span class="__cf_email__" data-cfemail="5f373a3333301f3e362c2a3d2b3a272b713e36">[email&#160;protected]</span></a>
   </p>
 </section>
 
@@ -310,24 +321,75 @@ footer a:hover { color: #f5f2eb; }
   </div>
 </section>
 
-<footer>
-  <span>© 2026 AIsubtext · AI Brand Intelligence</span>
-  <a href="/cdn-cgi/l/email-protection#2e47404a4b566e4f475d5b4c5a4b565a004f47"><span class="__cf_email__" data-cfemail="c0a9aea4a5b880a1a9b3b5a2b4a5b8b4eea1a9">[email&#160;protected]</span></a>
-  <a href="https://aisubtext.ai">aisubtext.ai →</a>
+<footer itemscope itemtype="https://schema.org/Organization">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-name" itemprop="name">AI<span>subtext</span></div>
+      <div class="footer-brand-desc" itemprop="description">AI Brand Intelligence Platform. We measure how AI systems describe and represent companies.</div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <div class="footer-col-title">Platform</div>
+        <a href="https://audit.aisubtext.ai">Free Brand Audit</a>
+        <a href="https://brand.aisubtext.ai">How It Works</a>
+        <a href="https://aisubtext.ai/pricing">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Research</div>
+        <a href="https://index.aisubtext.ai">AI Brand Index 2026</a>
+        <a href="https://aisubtext.ai/methodology">Methodology</a>
+        <a href="https://aisubtext.ai/blog">Blog</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <a href="https://aisubtext.ai/about">About</a>
+        <a href="/cdn-cgi/l/email-protection#deb6bbb2b2b19ebfb7adabbcaabba6aaf0bfb7" itemprop="email"><span class="__cf_email__" data-cfemail="761e131a1a1936171f05031402130e0258171f">[email&#160;protected]</span></a>
+        <a href="https://linkedin.com/company/aisubtext">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-legal">
+      <strong style="color:#888">Data &amp; Methodology Disclaimer:</strong> The AI Brand Index 2026 presents aggregate scoring data derived from AIsubtext's proprietary audit methodology. Scores reflect AI engine outputs as observed during testing periods in Q4 2025 – Q1 2026 and are subject to change as underlying AI models are updated. Individual company scores are not published on this page. All company names and trademarks referenced in AIsubtext research are the property of their respective owners and are used solely for identification and benchmarking purposes. AIsubtext is not affiliated with, endorsed by, or sponsored by any company referenced in this index. This report is provided for informational purposes only and does not constitute professional advice.
+      <a href="https://aisubtext.ai/privacy">Privacy Policy</a> · <a href="https://aisubtext.ai/terms">Terms of Use</a>
+    </p>
+    <div class="footer-copy">© 2026 AIsubtext · AI Brand Intelligence · <span itemprop="url">aisubtext.ai</span></div>
+  </div>
 </footer>
 
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "AI Brand Index 2026",
+  "description": "Aggregate AI brand visibility scores for 461 companies across 10 industries, measured by AIsubtext using a proprietary multi-engine audit methodology.",
+  "url": "https://index.aisubtext.ai",
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIsubtext",
+    "url": "https://aisubtext.ai",
+    "email": "hello@aisubtext.ai"
+  },
+  "datePublished": "2026-02-01",
+  "temporalCoverage": "2025-10/2026-02",
+  "license": "https://aisubtext.ai/terms",
+  "variableMeasured": "AI brand visibility score (0–100)",
+  "measurementTechnique": "Multi-engine AI query testing and response accuracy scoring across ChatGPT and Perplexity"
+}
+</script>
+
+<!-- MODAL -->
 <div class="modal-overlay" id="modal">
   <div class="modal">
     <button class="modal-x" onclick="closeModal()">✕</button>
     <div id="mForm">
-      <div class="m-eye">Claim Your Listing</div>
-      <div class="m-co" id="mCo"></div>
-      <div class="m-score">AI Score: <span id="mScore"></span>/100</div>
-      <p>Your brand is underrepresented in AI. Enter your work email and we'll send you a full breakdown — and how to fix it.</p>
+      <div class="m-eye">Get Your Industry Score</div>
+      <div class="m-ind" id="mInd"></div>
+      <div class="m-sub" id="mSub"></div>
+      <p>Enter your work email and we'll send you a full breakdown of how AI describes companies in your space — plus how to improve your own score.</p>
       <input type="email" class="m-input" id="mEmail" placeholder="you@company.com">
-      <input type="hidden" id="mDomain">
-      <input type="hidden" id="mScoreVal">
-      <button class="m-submit" onclick="submitClaim()">Send Me My Full Report →</button>
+      <input type="hidden" id="mIndVal">
+      <button class="m-submit" onclick="submitClaim()">Send Me the Full Report →</button>
       <p style="font-size:0.65rem;color:#888;margin-top:0.75rem;margin-bottom:0;text-align:center;">Work email required · No spam</p>
     </div>
     <div class="m-success" id="mSuccess">
@@ -342,264 +404,125 @@ footer a:hover { color: #f5f2eb; }
 // ── CURSOR
 const cur = document.getElementById('cur');
 const curRing = document.getElementById('curRing');
-let mx=0, my=0, rx=0, ry=0;
-document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; });
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
 (function loop(){
-  if(cur) { cur.style.left = mx+'px'; cur.style.top = my+'px'; }
-  rx += (mx-rx)*0.1; ry += (my-ry)*0.1;
-  if(curRing) { curRing.style.left = rx+'px'; curRing.style.top = ry+'px'; }
+  if(cur){cur.style.left=mx+'px';cur.style.top=my+'px';}
+  rx+=(mx-rx)*0.1;ry+=(my-ry)*0.1;
+  if(curRing){curRing.style.left=rx+'px';curRing.style.top=ry+'px';}
   requestAnimationFrame(loop);
 })();
-document.querySelectorAll('a,button,input').forEach(el => {
-  el.addEventListener('mouseenter', () => { if(curRing){curRing.style.width='48px'; curRing.style.height='48px';} });
-  el.addEventListener('mouseleave', () => { if(curRing){curRing.style.width='36px'; curRing.style.height='36px';} });
+document.querySelectorAll('a,button,input').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{if(curRing){curRing.style.width='48px';curRing.style.height='48px';}});
+  el.addEventListener('mouseleave',()=>{if(curRing){curRing.style.width='36px';curRing.style.height='36px';}});
 });
 
 // ── DATA
-const DATA = [
-  {rank:1,company:'Stripe',url:'stripe.com',industry:'Fintech',score:89,visibility:'high'},
-  {rank:2,company:'Linear',url:'linear.app',industry:'B2B SaaS',score:82,visibility:'high'},
-  {rank:3,company:'Notion',url:'notion.so',industry:'B2B SaaS',score:81,visibility:'high'},
-  {rank:4,company:'Figma',url:'figma.com',industry:'B2B SaaS',score:80,visibility:'high'},
-  {rank:5,company:'Vercel',url:'vercel.com',industry:'B2B SaaS',score:79,visibility:'high'},
-  {rank:6,company:'Retool',url:'retool.com',industry:'B2B SaaS',score:76,visibility:'high'},
-  {rank:7,company:'Rippling',url:'rippling.com',industry:'B2B SaaS',score:74,visibility:'high'},
-  {rank:8,company:'Brex',url:'brex.com',industry:'Fintech',score:73,visibility:'high'},
-  {rank:9,company:'Vanta',url:'vanta.com',industry:'Cybersecurity',score:71,visibility:'high'},
-  {rank:10,company:'Klaviyo',url:'klaviyo.com',industry:'MarTech',score:70,visibility:'high'},
-  {rank:11,company:'Ramp',url:'ramp.com',industry:'Fintech',score:68,visibility:'medium'},
-  {rank:12,company:'Attentive',url:'attentive.com',industry:'MarTech',score:65,visibility:'medium'},
-  {rank:13,company:'Hex',url:'hex.tech',industry:'B2B SaaS',score:61,visibility:'medium'},
-  {rank:14,company:'Glean',url:'glean.com',industry:'B2B SaaS',score:58,visibility:'medium'},
-  {rank:15,company:'Pigment',url:'pigment.com',industry:'B2B SaaS',score:55,visibility:'medium'},
-  {rank:16,company:'Persona',url:'withpersona.com',industry:'Fintech',score:52,visibility:'medium'},
-  {rank:17,company:'Workato',url:'workato.com',industry:'B2B SaaS',score:48,visibility:'medium'},
-  {rank:18,company:'Statsig',url:'statsig.com',industry:'B2B SaaS',score:44,visibility:'medium'},
-  {rank:19,company:'6sense',url:'6sense.com',industry:'MarTech',score:52,visibility:'medium'},
-  {rank:20,company:'Mercury',url:'mercury.com',industry:'Fintech',score:66,visibility:'medium'},
-  {rank:21,company:'Clerk',url:'clerk.com',industry:'B2B SaaS',score:38,visibility:'low'},
-  {rank:22,company:'Tines',url:'tines.com',industry:'Cybersecurity',score:35,visibility:'low'},
-  {rank:23,company:'Stainless',url:'stainlessapi.com',industry:'B2B SaaS',score:31,visibility:'low'},
-  {rank:24,company:'Noma Security',url:'noma.security',industry:'Cybersecurity',score:28,visibility:'low'},
-  {rank:25,company:'Demandbase',url:'demandbase.com',industry:'MarTech',score:44,visibility:'medium'},
+const INDUSTRIES = [
+  {name:'Consumer',    avg:68,median:72,low:37,high:91,count:40},
+  {name:'EdTech',      avg:58,median:59,low:33,high:84,count:39},
+  {name:'B2B SaaS',    avg:57,median:58,low:27,high:88,count:84},
+  {name:'DevTools',    avg:57,median:56,low:28,high:92,count:57},
+  {name:'Cybersecurity',avg:55,median:55,low:25,high:85,count:38},
+  {name:'Fintech',     avg:54,median:53,low:26,high:89,count:45},
+  {name:'MarTech',     avg:52,median:50,low:27,high:82,count:44},
+  {name:'HR Tech',     avg:51,median:50,low:27,high:84,count:39},
+  {name:'HealthTech',  avg:44,median:42,low:22,high:71,count:40},
+  {name:'CleanTech',   avg:43,median:40,low:21,high:91,count:35},
 ];
 
-const BD = [
-  {industry:'Fintech',avg:48,count:890},
-  {industry:'B2B SaaS',avg:41,count:1980},
-  {industry:'MarTech',avg:37,count:760},
-  {industry:'EdTech',avg:31,count:280},
-  {industry:'Cybersecurity',avg:33,count:620},
-  {industry:'Consumer',avg:29,count:540},
-  {industry:'HealthTech',avg:26,count:410},
-  {industry:'CleanTech',avg:22,count:120},
+const TICKER_INDUSTRIES = [
+  'B2B SaaS','Fintech','MarTech','HR Tech','DevTools',
+  'HealthTech','EdTech','Consumer','Cybersecurity','CleanTech'
 ];
 
-let cf='all', cs='', dc=25;
+const DIST = [
+  {range:'80 – 100',pct:10,color:'#00c896'},
+  {range:'60 – 79', pct:22,color:'#4dc8a0'},
+  {range:'40 – 59', pct:25,color:'#f5a623'},
+  {range:'20 – 39', pct:35,color:'#ff4d1c'},
+  {range:'0 – 19',  pct:8, color:'#cc2200'},
+];
 
 function sc(n){ return n>=70?'#00c896':n>=40?'#f5a623':'#ff4d1c'; }
+function grade(n){ return n>=70?'A':n>=55?'B':n>=40?'C':'D'; }
 
-function renderRow(d){
-  const c = sc(d.score);
-  const action = d.score < 60
-    ? `<button class="claim-btn" onclick="openModal('${d.company.replace(/'/g,"\'")}','${d.url}',${d.score})">Claim Listing</button>`
-    : `<span class="vbadge v-${d.visibility==='high'?'hi':d.visibility==='medium'?'md':'lo'}">${d.visibility}</span>`;
-  return `<tr>
-    <td class="rank">${String(d.rank).padStart(2,'0')}</td>
-    <td><div class="co">${d.company}</div><span class="co-url">${d.url}</span></td>
-    <td><span class="tag">${d.industry}</span></td>
-    <td><div class="score-wrap"><div class="bar-bg"><div class="bar-fill" style="width:${d.score}%;background:${c}"></div></div><span class="score-n" style="color:${c}">${d.score}</span></div></td>
-    <td style="text-align:right">${action}</td>
-  </tr>`;
+function renderIndustries(){
+  document.getElementById('indGrid').innerHTML = INDUSTRIES.map(ind => {
+    const c = sc(ind.avg);
+    const g = grade(ind.avg);
+    return `<div class="ind-card" onclick="openModal('${ind.name}','${ind.avg}','${ind.median}','${ind.count}')">
+      <div class="ind-top">
+        <div>
+          <div class="ind-name">${ind.name}</div>
+          <div class="ind-count">${ind.count} companies analyzed</div>
+        </div>
+        <div class="ind-grade" style="color:${c}">${g}</div>
+      </div>
+      <div class="ind-bar-wrap">
+        <div class="ind-bar-track"><div class="ind-bar-fill" style="width:${ind.avg}%;background:${c}"></div></div>
+        <div class="ind-bar-labels">
+          <span class="ind-bar-label">0</span>
+          <span class="ind-bar-label">50</span>
+          <span class="ind-bar-label">100</span>
+        </div>
+      </div>
+      <div class="ind-stats">
+        <div class="ind-stat">
+          <div class="ind-stat-val" style="color:${c}">${ind.avg}</div>
+          <div class="ind-stat-lbl">Avg Score</div>
+        </div>
+        <div class="ind-stat">
+          <div class="ind-stat-val" style="color:rgba(245,242,235,0.7)">${ind.median}</div>
+          <div class="ind-stat-lbl">Median</div>
+        </div>
+        <div class="ind-stat">
+          <div class="ind-stat-val" style="color:rgba(245,242,235,0.4)">${ind.low}–${ind.high}</div>
+          <div class="ind-stat-lbl">Range</div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
 }
 
-function getFiltered(){
-  let d = [...DATA];
-  if(cf==='low') d.sort((a,b)=>a.score-b.score);
-  else if(cf==='high') d.sort((a,b)=>b.score-a.score);
-  else if(cf!=='all') d = d.filter(x=>x.industry===cf);
-  if(cs) d = d.filter(x=>x.company.toLowerCase().includes(cs)||x.url.toLowerCase().includes(cs));
-  return d;
-}
-
-function renderTable(){ document.getElementById('tbody').innerHTML = getFiltered().slice(0,dc).map(renderRow).join(''); }
-function filterBy(btn,f){ cf=f; dc=25; document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderTable(); }
-function handleSearch(){ cs=document.getElementById('searchInput').value.toLowerCase(); dc=25; renderTable(); }
-function loadMore(){ dc+=25; renderTable(); }
-
-function renderBD(){
-  document.getElementById('bdGrid').innerHTML = BD.map(s =>
-    `<div class="bd-card"><div class="bd-ind">${s.industry}</div><div class="bd-score" style="color:${sc(s.avg)}">${s.avg}</div><div class="bd-count">${s.count.toLocaleString()} companies · avg /100</div></div>`
-  ).join('');
+function renderDistribution(){
+  document.getElementById('distBars').innerHTML = DIST.map(d=>`
+    <div class="dist-row">
+      <span class="dist-range">${d.range}</span>
+      <div class="dist-track"><div class="dist-fill" style="width:${d.pct*3}%;background:${d.color}"></div></div>
+      <span class="dist-pct" style="color:${d.color}">${d.pct}%</span>
+    </div>
+  `).join('');
 }
 
 function buildTicker(){
-  const items = DATA.slice(0,14).map(d =>
-    `<span class="${d.score>=70?'hi':d.score<40?'lo':''}">${d.company} ${d.score}/100</span>`
-  ).join('');
+  const items = TICKER_INDUSTRIES.map(name=>{
+    const ind = INDUSTRIES.find(i=>i.name===name);
+    return `<span data-score="avg ${ind.avg}/100">${name}</span>`;
+  }).join('');
   document.getElementById('ticker').innerHTML = items+items+items;
 }
 
 // ── MODAL
-function openModal(company,domain,score){
-  document.getElementById('mCo').textContent = company;
-  document.getElementById('mScore').textContent = score;
-  document.getElementById('mDomain').value = domain;
-  document.getElementById('mScoreVal').value = score;
+function openModal(ind, avg, median, count){
+  document.getElementById('mInd').textContent = ind;
+  document.getElementById('mSub').textContent = `${count} companies · avg ${avg}/100 · median ${median}/100`;
+  document.getElementById('mIndVal').value = ind;
   document.getElementById('mEmail').value = '';
+  document.getElementById('mEmail').style.borderColor = '';
   document.getElementById('mForm').style.display = 'block';
   document.getElementById('mSuccess').style.display = 'none';
   document.getElementById('modal').classList.add('open');
 }
 function closeModal(){ document.getElementById('modal').classList.remove('open'); }
-document.getElementById('modal').addEventListener('click', function(e){ if(e.target===this) closeModal(); });
+document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
 
 async function submitClaim(){
   const email = document.getElementById('mEmail').value.trim();
   const free = ['gmail','yahoo','hotmail','outlook','icloud','protonmail'];
-  if(!email || !email.includes('@')){ document.getElementById('mEmail').style.borderColor='#ff4d1c'; return; }
-  if(free.includes(email.split('@')[1]?.split('.')[0])){ document.getElementById('mEmail').placeholder='Work email required'; document.getElementById('mEmail').value=''; return; }
-  document.getElementById('mSuccessEmail').textContent = email;
-  document.getElementById('mForm').style.display = 'none';
-  document.getElementById('mSuccess').style.display = 'block';
-  try {
-    await fetch('https://aisubtext-monitor-production.up.railway.app/api/claim',{
-      method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({email, company:document.getElementById('mCo').textContent, domain:document.getElementById('mDomain').value, score:document.getElementById('mScoreVal').value, source:'index-claim'})
-    });
-  } catch(e){}
-}
-
-// ── INIT
-window.addEventListener('load', function() {
-  renderTable();
-  renderBD();
-  buildTicker();
-});
-</script><script>
-// ── CURSOR
-const cur = document.getElementById('cur');
-const curRing = document.getElementById('curRing');
-let mx=0, my=0, rx=0, ry=0;
-document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; });
-(function loop(){
-  cur.style.left = mx+'px'; cur.style.top = my+'px';
-  rx += (mx-rx)*0.1; ry += (my-ry)*0.1;
-  curRing.style.left = rx+'px'; curRing.style.top = ry+'px';
-  requestAnimationFrame(loop);
-})();
-document.querySelectorAll('a,button,input').forEach(el => {
-  el.addEventListener('mouseenter', () => { curRing.style.width='48px'; curRing.style.height='48px'; });
-  el.addEventListener('mouseleave', () => { curRing.style.width='36px'; curRing.style.height='36px'; });
-});
-
-// ── DATA
-const DATA = [
-  {rank:1,company:'Stripe',url:'stripe.com',industry:'Fintech',score:89,visibility:'high'},
-  {rank:2,company:'Linear',url:'linear.app',industry:'B2B SaaS',score:82,visibility:'high'},
-  {rank:3,company:'Notion',url:'notion.so',industry:'B2B SaaS',score:81,visibility:'high'},
-  {rank:4,company:'Figma',url:'figma.com',industry:'B2B SaaS',score:80,visibility:'high'},
-  {rank:5,company:'Vercel',url:'vercel.com',industry:'B2B SaaS',score:79,visibility:'high'},
-  {rank:6,company:'Retool',url:'retool.com',industry:'B2B SaaS',score:76,visibility:'high'},
-  {rank:7,company:'Rippling',url:'rippling.com',industry:'B2B SaaS',score:74,visibility:'high'},
-  {rank:8,company:'Brex',url:'brex.com',industry:'Fintech',score:73,visibility:'high'},
-  {rank:9,company:'Vanta',url:'vanta.com',industry:'Cybersecurity',score:71,visibility:'high'},
-  {rank:10,company:'Klaviyo',url:'klaviyo.com',industry:'MarTech',score:70,visibility:'high'},
-  {rank:11,company:'Ramp',url:'ramp.com',industry:'Fintech',score:68,visibility:'medium'},
-  {rank:12,company:'Attentive',url:'attentive.com',industry:'MarTech',score:65,visibility:'medium'},
-  {rank:13,company:'Hex',url:'hex.tech',industry:'B2B SaaS',score:61,visibility:'medium'},
-  {rank:14,company:'Glean',url:'glean.com',industry:'B2B SaaS',score:58,visibility:'medium'},
-  {rank:15,company:'Pigment',url:'pigment.com',industry:'B2B SaaS',score:55,visibility:'medium'},
-  {rank:16,company:'Persona',url:'withpersona.com',industry:'Fintech',score:52,visibility:'medium'},
-  {rank:17,company:'Workato',url:'workato.com',industry:'B2B SaaS',score:48,visibility:'medium'},
-  {rank:18,company:'Statsig',url:'statsig.com',industry:'B2B SaaS',score:44,visibility:'medium'},
-  {rank:19,company:'6sense',url:'6sense.com',industry:'MarTech',score:52,visibility:'medium'},
-  {rank:20,company:'Mercury',url:'mercury.com',industry:'Fintech',score:66,visibility:'medium'},
-  {rank:21,company:'Clerk',url:'clerk.com',industry:'B2B SaaS',score:38,visibility:'low'},
-  {rank:22,company:'Tines',url:'tines.com',industry:'Cybersecurity',score:35,visibility:'low'},
-  {rank:23,company:'Stainless',url:'stainlessapi.com',industry:'B2B SaaS',score:31,visibility:'low'},
-  {rank:24,company:'Noma Security',url:'noma.security',industry:'Cybersecurity',score:28,visibility:'low'},
-  {rank:25,company:'Demandbase',url:'demandbase.com',industry:'MarTech',score:44,visibility:'medium'},
-];
-
-const BD = [
-  {industry:'Fintech',avg:48,count:890},
-  {industry:'B2B SaaS',avg:41,count:1980},
-  {industry:'MarTech',avg:37,count:760},
-  {industry:'EdTech',avg:31,count:280},
-  {industry:'Cybersecurity',avg:33,count:620},
-  {industry:'Consumer',avg:29,count:540},
-  {industry:'HealthTech',avg:26,count:410},
-  {industry:'CleanTech',avg:22,count:120},
-];
-
-let cf='all', cs='', dc=25;
-
-function sc(n){ return n>=70?'#00c896':n>=40?'#f5a623':'#ff4d1c'; }
-
-function renderRow(d){
-  const c = sc(d.score);
-  const action = d.score < 60
-    ? `<button class="claim-btn" onclick="openModal('${d.company.replace(/'/g,"\\'")}','${d.url}',${d.score})">Claim Listing</button>`
-    : `<span class="vbadge v-${d.visibility==='high'?'hi':d.visibility==='medium'?'md':'lo'}">${d.visibility}</span>`;
-  return `<tr>
-    <td class="rank">${String(d.rank).padStart(2,'0')}</td>
-    <td><div class="co">${d.company}</div><span class="co-url">${d.url}</span></td>
-    <td><span class="tag">${d.industry}</span></td>
-    <td><div class="score-wrap"><div class="bar-bg"><div class="bar-fill" style="width:${d.score}%;background:${c}"></div></div><span class="score-n" style="color:${c}">${d.score}</span></div></td>
-    <td style="text-align:right">${action}</td>
-  </tr>`;
-}
-
-function getFiltered(){
-  let d = [...DATA];
-  if(cf==='low') d.sort((a,b)=>a.score-b.score);
-  else if(cf==='high') d.sort((a,b)=>b.score-a.score);
-  else if(cf!=='all') d = d.filter(x=>x.industry===cf);
-  if(cs) d = d.filter(x=>x.company.toLowerCase().includes(cs)||x.url.toLowerCase().includes(cs));
-  return d;
-}
-
-function renderTable(){ document.getElementById('tbody').innerHTML = getFiltered().slice(0,dc).map(renderRow).join(''); }
-function filterBy(btn,f){ cf=f; dc=25; document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderTable(); }
-function handleSearch(){ cs=document.getElementById('searchInput').value.toLowerCase(); dc=25; renderTable(); }
-function loadMore(){ dc+=25; renderTable(); }
-
-function renderBD(){
-  document.getElementById('bdGrid').innerHTML = BD.map(s =>
-    `<div class="bd-card"><div class="bd-ind">${s.industry}</div><div class="bd-score" style="color:${sc(s.avg)}">${s.avg}</div><div class="bd-count">${s.count.toLocaleString()} companies · avg /100</div></div>`
-  ).join('');
-}
-
-function buildTicker(){
-  const items = DATA.slice(0,14).map(d =>
-    `<span class="${d.score>=70?'hi':d.score<40?'lo':''}">${d.company} ${d.score}/100</span>`
-  ).join('');
-  document.getElementById('ticker').innerHTML = items+items+items;
-}
-
-// ── MODAL
-function openModal(company,domain,score){
-  document.getElementById('mCo').textContent = company;
-  document.getElementById('mScore').textContent = score;
-  document.getElementById('mDomain').value = domain;
-  document.getElementById('mScoreVal').value = score;
-  document.getElementById('mEmail').value = '';
-  document.getElementById('mForm').style.display = 'block';
-  document.getElementById('mSuccess').style.display = 'none';
-  document.getElementById('modal').classList.add('open');
-}
-function closeModal(){ document.getElementById('modal').classList.remove('open'); }
-document.getElementById('modal').addEventListener('click', function(e){ if(e.target===this) closeModal(); });
-
-async function submitClaim(){
-  const email = document.getElementById('mEmail').value.trim();
-  const free = ['gmail','yahoo','hotmail','outlook','icloud','protonmail'];
-  if(!email || !email.includes('@')){ document.getElementById('mEmail').style.borderColor='#ff4d1c'; return; }
-  if(free.includes(email.split('@')[1]?.split('.')[0])){ document.getElementById('mEmail').placeholder='Work email required'; document.getElementById('mEmail').value=''; return; }
-  document.getElementById('mSuccessEmail').textContent = email;
-  document.getElementById('mForm').style.display = 'none';
-  document.getElementById('mSuccess').style.display = 'block';
-  try {
-    await fetch('https://aisubtext-monitor-production.up.railway.app/api/claim',{
-      method:'POST', headers:{'Content-Type':'applic
+  if(!email||!email.includes('@')){document.getElementById('mEmail').style.borderColor='#ff4d1c';return;}
+  if(free.includes(email.split('@')[1]?.split('.')[0])){
+    document.getElementById('mEmail').placeholder='Work email required';
+    document.getElementById('mEmail').value='';
+    return;
+  }
